@@ -1,5 +1,5 @@
 {
-	"name": "your-module-name",
+	"name": "tasmota-mqtt",
 	"version": "0.1.0",
 	"main": "main.js",
 	"scripts": {
@@ -9,10 +9,13 @@
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/bitfocus/companion-module-your-module-name.git"
+		"url": "git+https://github.com/bitfocus/companion-module-tasmota-mqtt.git"
 	},
 	"dependencies": {
-		"@companion-module/base": "~1.7.0"
+		"@companion-module/base": "~1.8.0",
+		"debounce-fn": "^6.0.0",
+		"mqtt": "^5.8.0",
+		"object-path": "^0.11.8"
 	},
 	"devDependencies": {
 		"@companion-module/tools": "^1.4.2"

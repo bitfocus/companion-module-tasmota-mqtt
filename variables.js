@@ -1,7 +1,8 @@
 module.exports = async function (self) {
-	self.setVariableDefinitions([
-		{ variableId: 'variable1', name: 'My first variable' },
-		{ variableId: 'variable2', name: 'My second variable' },
-		{ variableId: 'variable3', name: 'Another variable' },
-	])
+	let variableDefinitions = []
+	self.variables.forEach( (varDefinition, varId) => {
+		variableDefinitions.push( {variableId: varId, name: varDefinition.name})
+	})
+	self.setVariableDefinitions(variableDefinitions)
+	console.log("VARIABLE DEFINITIONS:", variableDefinitions)
 }
